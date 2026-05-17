@@ -2,8 +2,8 @@
 
 > Upload any PDF and have a grounded, cited conversation with it — powered by Groq, Gemini, and Supabase pgvector.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20App-emerald?style=for-the-badge)](https://your-app.vercel.app)
-[![Backend](https://img.shields.io/badge/Backend-Railway-purple?style=for-the-badge)](https://your-backend.railway.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20App-emerald?style=for-the-badge)](https://doc-chat-three-xi.vercel.app)
+[![Backend](https://img.shields.io/badge/Backend-Render-purple?style=for-the-badge)](https://rag-chatbot-wmku.onrender.com)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 ![DocChat Demo](docs/demo.gif)
