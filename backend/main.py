@@ -44,7 +44,7 @@ def health():
     return {"status": "ok"}
 
 
-@app.get("/ping", tags=["uptime"])
+@app.api_route("/ping", methods=["GET", "HEAD"], tags=["uptime"])
 def ping():
     """
     UptimeRobot keep-alive endpoint.
