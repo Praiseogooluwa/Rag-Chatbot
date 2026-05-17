@@ -23,7 +23,7 @@ create table if not exists documents (
 -- Stores text chunks + their vector embeddings
 -- embedding dimension:
 --   768  if using Gemini text-embedding-004
---   384  if using local sentence-transformers (all-MiniLM-L6-v2)
+--   3072 if using local sentence-transformers (all-MiniLM-L6-v2)
 -- Change the number below to match your embedding model!
 -- ============================================================
 create table if not exists chunks (
@@ -33,7 +33,7 @@ create table if not exists chunks (
   source       text not null,
   page_number  integer,
   chunk_index  integer,
-  embedding    vector(384),   -- Change to 768 if using Gemini embeddings
+  embedding    vector(3072),   -- Change to 768 if using Gemini embeddings
   created_at   timestamp with time zone default now()
 );
 
@@ -63,7 +63,7 @@ create index if not exists messages_session_idx on messages(session_id);
 -- Returns top-k chunks ordered by cosine similarity
 -- ============================================================
 create or replace function match_chunks (
-  query_embedding vector(384),   -- Change to 768 if using Gemini embeddings
+  query_embedding vector(3072),   -- Change to 768 if using Gemini embeddings
   match_count     int default 5,
   match_threshold float default 0.3
 )
